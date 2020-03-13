@@ -1,0 +1,34 @@
+<div class="panel panel-default">
+  <div class="panel-heading">
+    <h1 style="text-align: center">Location</h1><br>
+    <div class="row">
+      <div class="col-sm-4"></div>
+    </div>
+  </div>
+  <div class="panel-body">
+    <table class="table table-hover table-sm">
+      <thead class="thead-light">
+        <tr>
+          <th>Location Id</th>
+          <th>Address</th>
+          <th>Location Name</th>
+          <th>Location Code</th>
+          <th>Action</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr *ngFor="let hero of students">
+          <td>{{hero.locationId}}</td>
+          <td>{{hero.address}}</td>
+          <td>{{hero.locationName}}</td>
+          <td>{{hero.locationCode}}</td>
+          <!-- <app-update [locationId]=hero.locationId ></app-update> -->
+          <td>
+            <button class='btn btn-primary'><i class="fa fa-futboll-0" (click)="deleteEvent(hero.locationId)">Delete {{locationId}}</i></button>
+            <button class='btn btn-info' data-toggle="modal" data-target="#myModal">Update</button>
+        </td>
+        </tr>
+      </tbody><br>
+    </table>
+  </div>
+</div>
